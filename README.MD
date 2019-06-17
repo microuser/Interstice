@@ -51,7 +51,18 @@ in settings I allowed Breakpoints everywhere in any file.
 Use Menu: Debug -> Start Debugging
 Since I'm on windows I choose C++ Windows
 Notice that a launch.json appeared. You can delete this if you mess it up.
-I changed the value for the key "program" to : "${workspaceFolder}/interstice.exe",
+I changed the value for the key "program" to : "program": "${workspaceFolder}/target/debug/interstice.exe",
+
+### Trying some debugging
+research better ways to build: https://fungos.github.io/blog/2017/08/12/setting-up-a-rust-environment-on-windows/
+
+Set some breakpoints in main.rs
+
+Type in new terminal inside VScode
+`cargo build`
+
+Use Debug Menu->  Start Debugging (F5)
+
 
 ### Adding JSON serialization
 research the best cargo file is Serde JSON
