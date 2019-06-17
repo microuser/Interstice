@@ -3,6 +3,10 @@ Setting Up dev environment
 ##In Windows
 
 install git if you don't have it. I chose VScode as text editor
+I opened a terminal and connected it to me.
+`git config --global user.name "MY NAME "`
+`git config --global user.email "MY EMAIL"`
+
 
 Get Visual Studio Code from ninite.com
 Use VSCode plugin area to install C/C++ : https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools
