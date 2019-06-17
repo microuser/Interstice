@@ -1,0 +1,7 @@
+[package]
+name = "interstice"
+version = "0.1.0"
+authors = ["micro"]
+edition = "2018"
+
+[dependencies]
