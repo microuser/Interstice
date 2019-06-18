@@ -134,6 +134,26 @@ now lets sync them. We will push to master branch since that is what we have bee
 since we have been typing in this document, lets verify changes propigate. Save the MD file i am typing right now.
 `git status`
 
+notice we have a modified README.MD. Commit all unstaged changes and give it a message
+`git commit -a -m "checking chained connection of repos"`
+but when we attempt `git push` we notice that we still need to set upstream master. So lets do that.
+
+`git push --set-upstream origin master`
+
+Now check you files on your github.
+
+And lets change our branch to a dev branch to keep off master for now.
+
+remember: in the future it will default to master, to get a branch in specific use the b option `git checkout branchname`. Even creating a branch requires switching to it. so lets do both.
+
+create branch
+`git branch dev`
+`git checkout dev`
+
+lets verify this works.
+`git commit -a "just created a dev branch"
+
+
 
 
 # Lets review our objective
