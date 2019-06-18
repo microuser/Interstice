@@ -105,6 +105,8 @@ skim through examples.
 https://doc.rust-lang.org/book/ch11-03-test-organization.html
 
 # Lets Commit
+## A slight review of GIT and Github.com on windows
+
 Documentation: https://help.github.com/en/articles/adding-an-existing-project-to-github-using-the-command-line
 
 Since `cargo new Interstice` was used, we have a local github repository. But I want it in github. Use your github account and create an empty repository with no Readme file or license.
