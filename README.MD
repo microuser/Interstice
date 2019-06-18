@@ -110,13 +110,17 @@ Documentation: https://help.github.com/en/articles/adding-an-existing-project-to
 Since `cargo new Interstice` was used, we have a local github repository. But I want it in github. Use your github account and create an empty repository with no Readme file or license.
 
 Open up the git prompt and run:
+
 `ssh-keygen.exe`
+
 notice that it created some files and stored them in /c/Users/username/.ssh/
 
 Copy that pub key to github.com ssh keys section
+
 `cat /c/Users/micro/.ssh/id_rsa.pub`
 
 Since we are typing this up. Lets make sure we got out project added to our local repository
+
 `git add *`
 
 `git commit -m 'writing git documentation'`
@@ -125,17 +129,24 @@ Copy the  ssh command from your repo :git@github.com:microuser/Interstice.git
 
 declare the local repo has a remote origin
 `git remote add origin git@github.com:microuser/Interstice.git`
+
 verify url
+
 `git remote -v`
+
 Notice that we have to lines
+
 now lets sync them. We will push to master branch since that is what we have been using.
+
 `git push origin master`
 
 since we have been typing in this document, lets verify changes propigate. Save the MD file i am typing right now.
 `git status`
 
 notice we have a modified README.MD. Commit all unstaged changes and give it a message
+
 `git commit -a -m "checking chained connection of repos"`
+
 but when we attempt `git push` we notice that we still need to set upstream master. So lets do that.
 
 `git push --set-upstream origin master`
@@ -147,27 +158,37 @@ And lets change our branch to a dev branch to keep off master for now.
 remember: in the future it will default to master, to get a branch in specific use the b option `git checkout branchname`. Even creating a branch requires switching to it. so lets do both.
 
 create branch
+
 `git branch dev`
+
 `git checkout dev`
 
 lets verify this works.
 `git commit -a -m "just created a dev branch"
 
 and since we have a new branch, that too needs to be told upstream
+
 `git push --set-upstream origin dev`
 
 normally you make your branches, and pull requests in github.com, but lets use CLI to merge dev to master for kicks.
 save our stuff for where we are on dev. since we are typing this out.
+
 `git commit -a -m "before testing a merge"`
 
+`git push`
+
 set the context to who you want to merge into
+
 `git checkout master`
+
 `git merge dev`
+
 tell github of your changes
 `git push`
 go back to working on dev
 `git checkout dev`
 
+lets check on the webbrowser where we are now
 
 
 
