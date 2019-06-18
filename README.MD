@@ -184,14 +184,20 @@ set the context to who you want to merge into
 `git merge dev`
 
 tell github of your changes
+
 `git push`
+
 go back to working on dev
+
 `git checkout dev`
 
 lets check on the webbrowser where we are now
 
+ugg. it loos ugly, i've been doing markdown without enough line breaks.
 
+lets do this all again and check. this time in one dangerous command
 
+`git commit -a -m "fixed line breaks for markdown" ; git push ; git checkout master ; git merge dev ; git push ; git checkout dev`
 
 # Lets review our objective
 ## Accoring to requirements:
