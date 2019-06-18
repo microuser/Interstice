@@ -1,3 +1,8 @@
+# Interstice
+It literally means:
+`an intervening space, especially a very small one`
+
+
 # What is this?
 This is a coding project. In fact is a my first rust program. I love writing reproducable documentation so this is my step by step through process as I made this example program. The primise is that a JSON file contains some date ranges, and I want to find the Interstice of days which can fit reservations in them without creating unusable days. For example if I have a week (where all reservations are for the night of, like a hotel), day 1 though 6. it would be inadvisable to allow a reservation from day 3 though 5, because few reservations in my proverbial puzzle would be for just 2 days from day 1 to day 2, while also preventing the same issue at the other size for day 6 and 7. There is a specific keywork i am avoidding on purpose, perhaps it has the same name as a clothing company. This is because this code will be published on github and I desire an audience of those wanting to learn Rust language, rather than people using gogole to cheat to get free code.
 
@@ -100,7 +105,36 @@ skim through examples.
 https://doc.rust-lang.org/book/ch11-03-test-organization.html
 
 # Lets Commit
-Since `cargo new Interstice` was used, we have a local github repository. But I want it in github. Use your github account and create an empty repository with no Readme file.
+Documentation: https://help.github.com/en/articles/adding-an-existing-project-to-github-using-the-command-line
+
+Since `cargo new Interstice` was used, we have a local github repository. But I want it in github. Use your github account and create an empty repository with no Readme file or license.
+
+Open up the git prompt and run:
+`ssh-keygen.exe`
+notice that it created some files and stored them in /c/Users/username/.ssh/
+
+Copy that pub key to github.com ssh keys section
+`cat /c/Users/micro/.ssh/id_rsa.pub`
+
+Since we are typing this up. Lets make sure we got out project added to our local repository
+`git add *`
+
+`git commit -m 'writing git documentation'`
+
+Copy the  ssh command from your repo :git@github.com:microuser/Interstice.git
+
+declare the local repo has a remote origin
+`git remote add origin git@github.com:microuser/Interstice.git`
+verify url
+`git remote -v`
+Notice that we have to lines
+now lets sync them. We will push to master branch since that is what we have been using.
+`git push origin master`
+
+since we have been typing in this document, lets verify changes propigate. Save the MD file i am typing right now.
+`git status`
+
+
 
 # Lets review our objective
 ## Accoring to requirements:
