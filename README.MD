@@ -158,7 +158,7 @@ and since we have a new branch, that too needs to be told upstream
 
 normally you make your branches, and pull requests in github.com, but lets use CLI to merge dev to master for kicks.
 save our stuff for where we are on dev. since we are typing this out.
-`git commit -a -m "before testing a merge"
+`git commit -a -m "before testing a merge"`
 
 set the context to who you want to merge into
 `git checkout master`
