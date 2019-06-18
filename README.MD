@@ -151,7 +151,23 @@ create branch
 `git checkout dev`
 
 lets verify this works.
-`git commit -a "just created a dev branch"
+`git commit -a -m "just created a dev branch"
+
+and since we have a new branch, that too needs to be told upstream
+`git push --set-upstream origin dev`
+
+normally you make your branches, and pull requests in github.com, but lets use CLI to merge dev to master for kicks.
+save our stuff for where we are on dev. since we are typing this out.
+`git commit -a -m "before testing a merge"
+
+set the context to who you want to merge into
+`git checkout master`
+`git merge dev`
+tell github of your changes
+`git push`
+go back to working on dev
+`git checkout dev`
+
 
 
 
