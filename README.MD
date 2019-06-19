@@ -296,6 +296,8 @@ fn main() {
 
 At this point. We switch to Section AB
 
+`git add * ; git commit -a -m "we have skeleton and file content from argument" ; git push ; git checkout -b SectionAB  `
+
 TODO:
 for now. lets create our first objects with some constructors and just pass data in and out inside main.rs.
 
