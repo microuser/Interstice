@@ -233,6 +233,85 @@ lets do this all again and check. this time in one dangerous command
            1.  Consider a docker microservice with share to xfer file
    11. Integration Test
 
+#Coding to the specifications (Section AA)
 ## Lets Code the JSON loader to object with a simple test
+
+Section A is a concept i'm using to allow you to roll back time though the pull requests. Say you were to create a different branch, then you could fork my project and do merges for various branches. From above, you should understand how to synv dev to master, if you apply this conecpt to the branch SectionA, you should see the development of my app.
+for now, i'm switching to 
+
+`git checkout -b SectionAA ; git push --set-upstream origin SectionAA`
+
+Earlier we placed the input.json file in our src. Lets try to load it. Then run a debugger on what it created.
+
+I come from a history of MVC architecture, and still need to learn more about functional langs, but for now i'm going to follow some conventions which might be shunned in RUST. But some structure is better than none. Lets just go. I create the file in .\src\services\JsonToReceptacle.rs
+
+I also look in the input.json file to imagine a the structure. I create an object in .\src\recepticale\ for a search, campsite, and reservation. I call the whole thing which contains all the search with the campsite data and reservetion called the receptacle. The idea is that in the future the receptacle could be proken into a database of existing reservations and campsites. I would like to immitate a SQL query like pattern, so in the future we can shift the code to a database, or a no-sql.
+
+with that in mind, we create those files, and the mod.rs file which relates to recepticle itself. Notice the structure of nested ness.
+
+```
+//File: .\src\recepticale\mod.rs
+pub mod campsite;
+pub mod reservation;
+pub mod search;
+
+pub struct Receptacle {
+    pub campsites : Vec<self::campsite::Campsite> ,
+    pub reservations : Vec<self::reservation::Reservation> ,
+    pub search : self::search::Search ,
+}
+```
+
+1. Most importantly, in main.rs we have the `pub mod ` declaration for receptacle. This seems different than namespaces where you expose the 
+publicity of the item not in the item. so my assumption is that I have to revisit this. TODO: revisit this.
+
+2. We then assume that the input file is the first argument, so we add a function for that to main.rs . Noitice that `<'a>` applies a cool scoping rule such that the newly created string can exist in its caller's context. I think this is optional. TODO: Revisit this.
+
+3. We also want to grab the content of the file to a string, so we add a function for that to main.rs
+
+
+```
+//File: main.rs
+
+pub mod receptacle;
+
+fn get_filename_of_first_argument<'a>() -> String {
+    std::env::args().nth(1).expect("First agument must be a filename")
+}    
+
+fn get_content_of_first_argument<'a>() -> String{
+    std::fs::read_to_string(
+        get_filename_of_first_argument()
+        ).expect("first argument must be a path that exists with valid JSON")
+}
+
+fn main() {
+    
+    let file_content = get_content_of_first_argument();
+    println!("{}", file_content);
+}
+
+
+```
+
+At this point. We switch to Section AB
+
+TODO:
+for now. lets create our first objects with some constructors and just pass data in and out inside main.rs.
+
+TODO: Lets use serge to decode into objects
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 

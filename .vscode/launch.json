@@ -9,7 +9,7 @@
             "type": "cppvsdbg",
             "request": "launch",
             "program": "${workspaceRoot}/target/debug/${workspaceRootFolderName}.exe",
-            "args": [],
+            "args": ["${workspaceRoot}/src/input.json"],
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}",
             "environment": [],
